@@ -5,9 +5,9 @@ namespace robot
 {
 
 CostmapCore::CostmapCore(const rclcpp::Logger& logger) : logger_(logger), 
-    width_cells(50),  height_cells(50), resolution(0.3), 
+    width_cells(60),  height_cells(60), resolution(0.3), 
     origin(std::make_pair(-1*width_cells/2*resolution, -1*height_cells/2*resolution)),
-    inflation_radius(0.9), inflation_radius_cells(inflation_radius/resolution), max_cost(80) {
+    inflation_radius(1.2), inflation_radius_cells(inflation_radius/resolution), max_cost(90) {
         
     grid_data_ = std::make_shared<nav_msgs::msg::OccupancyGrid>();
     initializeCostmap();
